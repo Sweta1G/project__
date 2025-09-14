@@ -1,0 +1,218 @@
+.category-btn {
+	background: none;
+	border: none;
+	color: inherit;
+	font: inherit;
+	font-weight: 600;
+	font-size: 1.05rem;
+	cursor: pointer;
+	padding: 0;
+	outline: none;
+	transition: color 0.2s, border 0.2s;
+}
+.category-item.active .category-btn,
+.category-btn:hover {
+	color: #ff3f6c;
+	border-bottom: 2px solid #ff3f6c;
+}
+.nav-btn {
+	margin-left: 1.2rem;
+	padding: 0.38rem 1.1rem;
+	border-radius: 3px;
+	font-size: 0.98rem;
+	font-weight: 600;
+	text-decoration: none;
+	border: 1.5px solid #ff3f6c;
+	background: #fff;
+	color: #ff3f6c;
+	transition: background 0.2s, color 0.2s;
+	letter-spacing: 0.5px;
+}
+.nav-btn:hover {
+	background: #ff3f6c;
+	color: #fff;
+}
+.login-btn {
+	border-color: #ff3f6c;
+	color: #ff3f6c;
+	background: #fff;
+}
+.login-btn:hover {
+	background: #ff3f6c;
+	color: #fff;
+}
+.signup-btn {
+	border-color: #20b883;
+	color: #20b883;
+	background: #fff;
+	margin-left: 0.5rem;
+}
+.signup-btn:hover {
+	background: #20b883;
+	color: #fff;
+}
+/* Navbar.css */
+
+
+/* Myntra-style Navbar */
+.myntra-navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.7rem 3.5rem 0.7rem 2.2rem;
+	background: #fff;
+	border-bottom: 2px solid #f5f5f6;
+	font-family: 'Poppins', 'Inter', Arial, sans-serif;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 4px 18px rgba(255,63,108,0.07), 0 2px 8px rgba(0,0,0,0.04);
+	min-height: 64px;
+}
+
+.navbar-left {
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+}
+
+.myntra-logo {
+	height: 48px;
+	width: auto;
+	object-fit: contain;
+	display: block;
+	margin: 0 0.7rem 0 0;
+	filter: drop-shadow(0 2px 8px rgba(255,63,108,0.08));
+	transition: transform 0.18s;
+	background: none;
+	border-radius: 0;
+}
+.myntra-logo:hover {
+	transform: scale(1.08) rotate(-6deg);
+}
+
+.category-menu {
+	display: flex;
+	gap: 2.1rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.category-item .category-btn {
+	font-size: 1.13rem;
+	font-weight: 700;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+	color: #282c3f;
+	background: none;
+	border: none;
+	padding-bottom: 4px;
+	border-bottom: 2.5px solid transparent;
+	transition: color 0.18s, border 0.18s;
+}
+.category-item.active .category-btn,
+.category-btn:hover {
+	color: #ff3f6c;
+	border-bottom: 2.5px solid #ff3f6c;
+	background: none;
+}
+
+.search-box {
+	flex: 1;
+	max-width: 420px;
+	margin: 0 2rem;
+}
+.search-box input {
+	width: 100%;
+	padding: 0.65rem 1.3rem;
+	border-radius: 6px;
+	border: 1.7px solid #eaeaec;
+	background: #f5f5f6;
+	font-size: 1.07rem;
+	outline: none;
+	transition: border 0.18s, box-shadow 0.18s;
+	box-shadow: 0 1.5px 8px rgba(255,63,108,0.04);
+}
+.search-box input:focus {
+	border: 1.7px solid #ff3f6c;
+	background: #fff;
+	box-shadow: 0 0 0 2.5px #ffe6ef;
+}
+
+.navbar-icons {
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+}
+.icon-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #282c3f;
+	text-decoration: none;
+	font-size: 1.25rem;
+	font-weight: 600;
+	transition: color 0.18s;
+	padding: 0.1rem 0.5rem;
+	border-radius: 6px;
+}
+.icon-link span {
+	font-size: 0.93rem;
+	margin-top: 2px;
+	letter-spacing: 0.2px;
+	font-weight: 500;
+}
+.icon-link:hover {
+	color: #ff3f6c;
+	background: #fff0f5;
+}
+
+@media (max-width: 900px) {
+	.category-menu {
+		gap: 1.1rem;
+	}
+	.search-box {
+		max-width: 180px;
+		margin: 0 0.7rem;
+	}
+	.navbar-icons {
+		gap: 1.1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.myntra-navbar {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 0.5rem 0.7rem;
+		min-height: 48px;
+	}
+	.navbar-left {
+		flex-direction: column;
+		gap: 0.7rem;
+		align-items: flex-start;
+	}
+	.search-box {
+		margin: 0.5rem 0;
+		max-width: 100%;
+	}
+	.navbar-icons {
+		justify-content: flex-end;
+		gap: 0.7rem;
+	}
+	.myntra-logo {
+		height: 36px;
+		width: auto;
+		margin-right: 0.5rem;
+	}
+	.category-menu {
+		gap: 0.5rem;
+	}
+	.icon-link {
+		font-size: 1.1rem;
+		padding: 0.1rem 0.2rem;
+	}
+	.icon-link span {
+		font-size: 0.82rem;
+	}
+}

@@ -1,0 +1,13 @@
+.profile-container {
+	padding: 1rem; /* p-4 */
+	max-width: 36rem; /* max-w-xl */
+	margin: 0 auto; /* center horizontally */
+	font-family: Arial, sans-serif;
+}
+
+.profile-container h1 {
+	font-size: 1.875rem; /* text-3xl */
+	font-weight: bold;
+	margin-bottom: 1rem; /* mb-4 */
+	text-align: center;
+}
