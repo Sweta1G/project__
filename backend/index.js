@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require('dotenv').config();
 
 // Import Routes
 const authRoutes = require("./routes/auth"); // login/signup routes
@@ -15,7 +16,7 @@ app.use(cors()); // enable CORS
 
 // MongoDB Connection
 mongoose
-	.connect("mongodb+srv://FashionDNA:12345@cluster0.2rpg0qj.mongodb.net/")
+	.connect(process.env.MONGODB_URI)
 	.then(() => console.log("MongoDB connected"))
 	.catch((err) => console.log(err));
 
